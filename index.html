@@ -6,14 +6,16 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>SN4K3</title>
 		<link rel="stylesheet" href="src/style.css">
-		<link id="favicon" rel="icon" type="image/x-icon" href="img/fav.png">
+		<link id="favicon" rel="icon" type="image/x-icon" href="img/fav_col_lq.png">
+		<meta name=”robots” content=”noindex”>
 	</head>
 	<body theme="light" color="1">
+		<audio id="audio" loop="" volume="0.1"><source src="img/neffex_dance_again.mp3" type="audio/mpeg"></audio>
 		<script src="src/script.js"></script>
 		<script src="src/game.js"></script>
 		<header>
 			<div class="logo">
-				<img src="img/fav_white.png" />
+				<img src="img/fav_white_hq.png" />
 				<span>SN4K3</span>
 			</div>
 			<div>
@@ -50,12 +52,32 @@
 				<div id="game_field_utf8"></div>
 			</div>
 			<div class="controls">
+				<h1>Controls</h1>
+				<input type="text" id="game_playername" placeholder="Enter your name..." />
+				<br><br>
+				<button id="game_restart" onclick="gameRestart()">Start Game</button>
+				<button id="music_startstop" onclick="musicStartStop()">Play Music</button>
+				<br><br>
 				<h1>Highscore</h1>
 				<div id="game_highscore">
-					No highscores yet.
+					<div id="gane_highscore_noyet">
+						<span>No highscores yet.</span>
+					</div>
+					<div id="game_highscore_table">
+						<table>
+							<tr class="hoverable">
+								<th>Player</th>
+								<th>Score</th>
+								<th>Game</th>
+							</tr>
+							<tr class="hoverable">
+								<td>Chris</td>
+								<td>12</td>
+								<td>Screenshot</td>
+							</tr>
+						</table>
+					</div>
 				</div>
-				<h1>Controls</h1>
-				<button id="game_restart" onclick="gameRestart()">Restart</button>
 			</div>
 		</main>
 		<footer>
@@ -65,7 +87,9 @@
 			<span>|</span>
 			<span>WiSe 2024/2025</span>
 			<span>|</span>
-			<a class="link" href="mailto:c.wensierski@ostfalia.de">c.wensierski@ostfalia.de</a>
+			<span><a class="link" href="mailto:c.wensierski@ostfalia.de">c.wensierski@ostfalia.de</a></span>
+			<span>|</span>
+			<span>Music: <a class="link" target="_blank" href="https://www.youtube.com/watch?v=nREyRWKjQEA">NEFFEX - Dance Again 💃</a></span>
 		</footer>
 	</body>
 </html>

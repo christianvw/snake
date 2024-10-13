@@ -44,7 +44,29 @@ function changePageColor() {
 }
 
 function gameRestart() {
-	alert("Restarted!");
+	button = document.getElementById('game_restart');
+	playername = document.getElementById('game_playername');
+
+	if (playername.value == "") {
+		alert("Please enter your name.");
+		return;
+	}
+
+	button.innerHTML = "Restart Game";
+}
+
+function musicStartStop() {
+	button = document.getElementById('music_startstop');
+	audio = document.getElementById('audio');
+	audio.volume = 0.1;
+
+	if (audio.duration > 0 && !audio.paused) {
+		audio.pause();
+		button.innerHTML = "Play Music";
+	} else {
+		audio.play();
+		button.innerHTML = "Pause Music";
+	}
 }
 
 /*

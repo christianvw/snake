@@ -53,6 +53,7 @@ header > .logo {
 
 header img {
     height: 32px;
+	margin-right: 10px;
 }
 
 footer {
@@ -80,6 +81,14 @@ main > .game {
 main > .controls {
 	flex: 0 0 30%;
 	padding: 20px;
+}
+
+/**
+ * defaults (hide/show mostly)
+ */
+
+#game_highscore_table {
+	display: none;
 }
 
 /**
@@ -134,7 +143,7 @@ h3 {
  * inputs
  */
 
-input[type=text], input[type=date], input[type=time], input[type=number], select, textarea, input[type=password], input[type=search] {
+input[type=text], input[type=number], select {
 	background-color: var(--inputBackgroundColor);
 	border: 0;
 	padding: 10px;
@@ -142,6 +151,17 @@ input[type=text], input[type=date], input[type=time], input[type=number], select
 	color: var(--inputFontColor);
 	border-radius: 3px;
 	outline: none;
+}
+
+input[type=text]:focus, input[type=number]:focus, select:focus {
+	background-color: var(--inputBackgroundColorFocus);
+	border-bottom: 4px solid var(--inputBorderColorFocus);
+	padding-bottom: 6px;
+}
+
+input[type=text]:disabled, input[type=number]:disabled, select:disabled {
+	border-bottom: 4px solid var(--inputBorderColorDisabled);
+	padding-bottom: 6px;
 }
 
 button {
@@ -170,8 +190,35 @@ select {
 	cursor: pointer;
 }
 
-textarea {
-	resize: none;
+/**
+ * table
+ */
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	max-width: 100%;
+	font-size: 15px;
+	text-align: left;
+	word-wrap: anywhere;
+	word-break: break-word;
+}
+
+tr {
+	border-bottom: 1px solid var(--tableBorderColor);
+}
+
+th, td {
+	padding: 10px;
+	display: table-cell;
+	min-width: 100px;
+}
+
+tr.hoverable:hover {
+	background-color: var(--tableBackgroundColorHover);
+}
+
+td.hoverable:hover {
+	background-color: var(--tableBackgroundColorHover);
 }
 
 /**
