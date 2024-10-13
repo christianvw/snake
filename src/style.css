@@ -1,0 +1,179 @@
+/*
+ * style.css
+ *
+ * CSS for SN4K3 game
+ *
+ * written by von Wensierski, Christian (2024)
+ */
+
+@import 'colors.css';
+
+/**
+ * building blocks, divs, spacing
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+	padding: 0;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+	height: 100%;
+    width: 100%;
+    margin: 0;
+	padding: 0;
+    display: flex;
+    flex-direction: column;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: var(--fontColor);
+}
+
+header {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+    padding: 10px;
+    background-color: var(--mainColor);
+    color: var(--secFontColor);
+    text-align: center;
+}
+
+header > .logo {
+	display: flex;
+	align-items: center;
+}
+
+header img {
+    height: 32px;
+}
+
+footer {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+    padding: 10px;
+    background-color: var(--mainColor);
+    color: var(--secFontColor);
+}
+
+main {
+	display: flex;
+	flex: 1;
+    background-color: var(--mainBackgroundColor);
+    color: var(--mainFontColor);
+}
+
+main > .game {
+	flex: 0 0 70%;
+	padding: 20px;
+}
+
+main > .controls {
+	flex: 0 0 30%;
+	padding: 20px;
+}
+
+/**
+ * fonts and stuff
+ */
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.link {
+	color: var(--linkFontColor);
+	cursor: pointer;
+}
+
+.link:hover {
+	text-decoration: underline;
+	color: var(--linkFontColorHover);
+}
+
+footer .link {
+	color: var(--secFontColor) !important;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+	font-size: 26px;
+	color: var(--h1Color);
+}
+
+h2 {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+	font-size: 22px;
+	color: var(--h2Color);
+	margin-top: 0;
+}
+
+h3 {
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--h3Color);
+}
+
+/**
+ * inputs
+ */
+
+input[type=text], input[type=date], input[type=time], input[type=number], select, textarea, input[type=password], input[type=search] {
+	background-color: var(--inputBackgroundColor);
+	border: 0;
+	padding: 10px;
+	font-size: 15px;
+	color: var(--inputFontColor);
+	border-radius: 3px;
+	outline: none;
+}
+
+button {
+	padding: 10px 20px 10px 20px;
+	font-size: 15px;
+	background-color: var(--buttonBackgroundColor);
+	color: var(--buttonFontColor);
+	border: 0;
+	cursor: pointer;
+	transition: all .1s;
+	text-transform: uppercase;
+	border-radius: 3px;
+	font-weight: 600;
+	outline: none;
+}
+
+button:hover {
+	background-color: var(--buttonBackgroundColorHover);
+}
+
+option {
+	outline: none;
+}
+
+select {
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+/**
+ * game
+ */

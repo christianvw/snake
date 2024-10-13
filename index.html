@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>SN4K3</title>
+		<link rel="stylesheet" href="src/style.css">
+		<link id="favicon" rel="icon" type="image/x-icon" href="img/fav.png">
+	</head>
+	<body theme="light" color="1">
+		<script src="src/script.js"></script>
+		<script src="src/game.js"></script>
+		<header>
+			<div class="logo">
+				<img src="img/fav_white.png" />
+				<span>SN4K3</span>
+			</div>
+			<div>
+				<span>Dark/Light:</span>
+				<select id="page_theme" onchange="changePageTheme()">
+					<option value="auto">Automatic</option>
+					<option value="light">Light Mode</option>
+					<option value="dark">Dark Mode</option>
+				</select>
+			</div>
+			<div>
+				<span>Color:</span>
+				<select id="page_color" onchange="changePageColor()">
+					<option value="1">Ocean Blue</option>
+					<option value="2">Lava Red</option>
+				</select>
+			</div>
+			<div>
+				<span>Game Type:</span>
+				<select id="game_type" onchange="changeGameType()">
+					<option value="1" selected>Canvas</option>
+					<option value="2">CSS</option>
+					<option value="3">SVG</option>
+					<option value="4">UTF8</option>
+				</select>
+			</div>
+		</header>
+		<main>
+			<div class="game">
+				<h1>Game</h1>
+				<div id="game_field_canvas"></div>
+				<div id="game_field_css"></div>
+				<div id="game_field_svg"></div>
+				<div id="game_field_utf8"></div>
+			</div>
+			<div class="controls">
+				<h1>Highscore</h1>
+				<div id="game_highscore">
+					No highscores yet.
+				</div>
+				<h1>Controls</h1>
+				<button id="game_restart" onclick="gameRestart()">Restart</button>
+			</div>
+		</main>
+		<footer>
+			<span>von Wensierski, Christian André</span>
+			<span>|</span>
+			<span>Matricle No. 70486582</span>
+			<span>|</span>
+			<span>WiSe 2024/2025</span>
+			<span>|</span>
+			<a class="link" href="mailto:c.wensierski@ostfalia.de">c.wensierski@ostfalia.de</a>
+		</footer>
+	</body>
+</html>

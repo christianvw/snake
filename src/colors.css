@@ -1,0 +1,188 @@
+/**
+ *  ==============================================================================
+ *  Global colors and backgrounds
+ *  ==============================================================================
+ */
+
+body {
+	--white: rgb(255, 255, 255);
+	--black: rgb(0, 0, 0);
+	--darkgrey: rgb(68, 68, 68);
+	--yellow: rgb(255, 255, 51);
+	--green: rgb(56, 194, 61);
+	--blue: rgb(51, 133, 255);
+	--red: rgb(255, 51, 51);
+	--magenta: rgb(233, 4, 233);
+}
+
+/**
+ *  ==============================================================================
+ *  Color (setting) dependent colors
+ *  ==============================================================================
+ */
+
+
+/* standard blue */
+body[color="1"] {
+	--mainColor: #283593;
+	--mainColor-rgb: 40, 53, 147;
+	--mainColor2: #1b2575;  /* slightly darker */
+
+	--mainColorDarkMode: rgb(133, 182, 255);
+	--mainColorDarkMode-rgb: 133, 182, 255;
+	--mainColorDarkMode2: rgb(108, 167, 255);   /* slightly darker */
+
+	--sidenavColor: #283593;
+}
+
+/* red */
+body[color="2"] {
+	--mainColor: #c62828;
+	--mainColor-rgb: 198, 40, 40;
+	--mainColor2: #ac2a2a;   /* slightly darker */
+
+	--mainColorDarkMode: #ff795b;
+	--mainColorDarkMode-rgb: 255, 121, 91;
+	--mainColorDarkMode2: #ff5436;  /* slightly darker */
+
+	--sidenavColor: #c62828;
+}
+
+/**
+ *  ==============================================================================
+ *  Darkmode on/off dependet colors
+ *  ==============================================================================
+ */
+
+ body[theme=light] {
+	/* Main Fonts */
+	--fontColor: var(--black);
+	--secFontColor: var(--white);
+	--linkFontColor: var(--mainColor);
+	--linkFontColorHover: var(--mainColor);
+
+	/* Main Containers */
+	--mainBackgroundColor: rgb(255, 255, 255);
+	--mainHeaderFontColor: var(--white);
+
+	/* Sidenav */
+	--menuIconBackgroundColor: rgb(218, 218, 227);
+	--menuIconBackgroundColorHover: rgb(200, 200, 210);
+	--menuIconFontColor: var(--fontColor);
+	--sidenavBackgroundColor: var(--sidenavColor);
+	--sidenavBrandBackgroundColor: rgba(255, 255, 255, 0);
+	--sidenavProfileBackgroundColor: rgba(255, 255, 255, 0.15);
+	--sidenavItemBackgroundColorHover: rgba(0, 0, 0, 0.2);
+	--sidenavItemBackgroundColorOpen: rgba(0, 0, 0, 0.2);
+	--sidenavSublistBackgroundColor: rgba(0, 0, 0, 0.1);
+	--sidenavSublistBackgroundColorHover: rgba(255, 255, 255, 0.1);
+	--sidenavProfileBorderColor: var(--white);
+	--sidenavGroupBorderColor: transparent;
+	--sidenavFontColor: var(--white);
+	--sidenavSublistFontColor: #D3D3D3;
+	--sidenavHeadingFontColor: rgba(255, 255, 255, 0.5);
+	--sidenavItemFontColor: var(--white);
+	--sidenavIconFontColor: rgba(255, 255, 255, .5);
+	--sidenavIconFontColorHover: var(--white);
+
+	/* Input */
+	--buttonFontColor: var(--white);
+	--buttonBackgroundColor: var(--mainColor);
+	--buttonBackgroundColorHover: var(--mainColor2);
+	--buttonBackgroundColorDisabled: rgb(200, 200, 200);
+	--inputBorderColorDisabled: rgb(255, 51, 51);
+	--inputFontColorDisabled: grey;
+	--errorbuttonBackgroundColor: rgb(255, 51, 51);
+	--errorbuttonBackgroundColorHover: rgb(221, 31, 31);
+	--successbuttonBackgroundColor: rgb(76, 175, 80);
+	--successbuttonBackgroundColorHover: rgb(42, 154, 47);
+	--inputBackgroundColor: rgb(200, 200, 200);
+	--inputBackgroundColorHover: rgb(200, 200, 200);
+	--inputBackgroundColorFocus: rgb(215, 215, 215);
+	--inputBorderColorFocus: var(--mainColor);
+	--inputFontColor: rgb(0, 0, 0);
+	--checkboxBackgroundColor: rgb(215, 215, 215);
+	--checkboxBackgroundColorHover: rgb(200, 200, 200);
+	--checkboxBackgroundColorChecked: var(--mainColor);
+	--checkboxFontColor: var(--white);
+	--sliderBackgroundColor: #ccc;
+	--sliderBackgroundColorChecked: var(--mainColor);
+	--sliderDotBackgroundColor: var(--white);
+
+	/* Tables */
+	--tableBorderColor: rgb(215, 215, 215);
+	--tableBackgroundColorHover: rgb(240, 240, 240);
+	--tableDisabled: lightgray;
+	--tableRedBorder: rgb(255, 51, 51);
+	--tableError: rgb(206, 131, 131);
+	--tableSuccess: rgb(90, 160, 92);
+}
+
+body[theme=dark] {
+	/* Main Fonts */
+	--fontColor: rgb(200, 200, 200);
+	--secFontColor: var(--white);
+	--linkFontColor: var(--mainColorDarkMode);
+	--linkFontColorHover: var(--mainColorDarkMode);
+	--h1Color: var(--mainColorDarkMode);
+	--h2Color: var(--mainColorDarkMode);
+	--h3Color: var(--white);
+
+	/* Main Containers */
+	--mainBackgroundColor: rgb(24, 24, 24);
+	--mainHeaderFontColor: var(--white);
+
+	/* Sidenav */
+	--menuIconBackgroundColor: rgb(48, 48, 48);
+	--menuIconBackgroundColorHover: rgb(58, 58, 58);
+	--menuIconFontColor: var(--fontColor);
+	--sidenavBackgroundColor: rgb(33, 33, 33);  /* rgb(27, 31, 45) */
+	--sidenavBrandBackgroundColor: transparent;
+	--sidenavProfileBackgroundColor: rgba(255, 255, 255, 0.1);
+	--sidenavItemBackgroundColorHover: rgba(255, 255, 255, 0.1);
+	--sidenavItemBackgroundColorOpen: rgba(255, 255, 255, 0.1);
+	--sidenavSublistBackgroundColor: rgba(0, 0, 0, 0.1);
+	--sidenavSublistBackgroundColorHover: rgba(255, 255, 255, 0.1);
+	--sidenavProfileBorderColor: var(--white);
+	--sidenavGroupBorderColor: #333;
+	--sidenavFontColor: rgb(240, 240, 240);
+	--sidenavSublistFontColor: rgb(240, 240, 240);
+	--sidenavHeadingFontColor: rgba(255, 255, 255, 0.5);
+	--sidenavItemFontColor: rgb(240, 240, 240);
+	--sidenavIconFontColor: rgb(144, 144, 144);
+	--sidenavIconFontColorHover: rgb(255, 255, 255);
+	--sidenavLegalFontColor: rgb(170, 170, 170);
+	--sidenavLegalCompanyFontColor: rgb(110, 110, 110);
+
+	/* Input */
+	--buttonFontColor: var(--black);
+	--buttonBackgroundColor: var(--mainColorDarkMode);
+	--buttonBackgroundColorHover: var(--mainColorDarkMode2);
+	--buttonBackgroundColorDisabled: rgb(58, 58, 58);
+	--inputBorderColorDisabled: rgb(255, 51, 51);
+	--inputFontColorDisabled: grey;
+	--errorbuttonBackgroundColor: rgb(189, 51, 51);
+	--errorbuttonBackgroundColorHover: rgb(255, 51, 51);
+	--successbuttonBackgroundColor: rgb(76, 175, 80);
+	--successbuttonBackgroundColorHover: rgb(42, 154, 47);
+	--inputBackgroundColor: rgb(18, 18, 18);
+	--inputBackgroundColorHover: rgb(22, 22, 22);
+	--inputBackgroundColorFocus: rgb(28, 28, 28);
+	--inputBorderColorFocus: var(--mainColorDarkMode);
+	--inputFontColor: var(--white);
+	--checkboxBackgroundColor: rgb(18, 18, 18);
+	--checkboxBackgroundColorHover: rgb(28, 28, 28);
+	--checkboxBackgroundColorChecked: var(--mainColorDarkMode2);
+	--checkboxFontColor: var(--white);
+	--sliderBackgroundColor: rgb(18, 18, 18);
+	--sliderBackgroundColorChecked: var(--mainColorDarkMode2);
+	--sliderDotBackgroundColor: var(--white);
+
+	/* Tables */
+	--tableBorderColor: rgb(58, 58, 58);
+	--tableBackgroundColorHover: rgb(44, 44, 44);
+	--tableDisabled: rgb(24, 24, 24);
+	--tableRedBorder: rgb(255, 51, 51);
+	--tableError: rgba(255, 51, 51, 0.2);
+	--tableSuccess: rgba(76, 175, 80, 0.2);
+}
