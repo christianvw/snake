@@ -75,20 +75,29 @@ main {
 
 main > .game {
 	flex: 0 0 70%;
+}
+
+body[color="1"] main > .game {
+	background-image: url("../img/bg1.jpg");
+}
+
+body[color="2"] main > .game {
+	background-image: url("../img/bg2.jpg");
+}
+
+.game_header {
+	background-color: var(--mainBackgroundColor);
+	padding: 20px;
+	padding-bottom: 40px;
+}
+
+.game_field {
 	padding: 20px;
 }
 
 main > .controls {
 	flex: 0 0 30%;
 	padding: 20px;
-}
-
-/**
- * defaults (hide/show mostly)
- */
-
-#game_highscore_table {
-	display: none;
 }
 
 /**
@@ -224,3 +233,39 @@ td.hoverable:hover {
 /**
  * game
  */
+#game_highscore_table {
+	display: none;
+}
+
+#game_field_loading, #game_field_canvas, #game_field_css, #game_field_svg, #game_field_utf8 {
+	display: none;
+}
+
+#game_field_canvas.show, #game_field_css.show, #game_field_svg.show, #game_field_utf8.show {
+	display: block;
+}
+
+#game_field_loading.show {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-top: 128px;
+}
+
+#game_field_loading > img {
+	height: 256px;
+	animation: rotate 3s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+		animation-timing-function: cubic-bezier(0.5, 0.05, 0.1, 0.9);
+	}
+	100% {
+		transform: rotate(360deg);
+		animation-timing-function: cubic-bezier(0.5, 0.05, 0.1, 0.9);
+	}
+}

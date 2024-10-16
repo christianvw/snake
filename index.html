@@ -10,9 +10,11 @@
 		<meta name=”robots” content=”noindex”>
 	</head>
 	<body theme="light" color="1">
-		<audio id="audio" loop="" volume="0.1"><source src="img/neffex_dance_again.mp3" type="audio/mpeg"></audio>
-		<script src="src/script.js"></script>
-		<script src="src/game.js"></script>
+		<audio id="audio" loop="" volume="0.1">
+			<source src="img/neffex_dance_again.mp3" type="audio/mpeg">
+		</audio>
+		<script src="src/main.js"></script>
+		<script src="src/gamelogic.js"></script>
 		<header>
 			<div class="logo">
 				<img src="img/fav_white_hq.png" />
@@ -33,27 +35,40 @@
 					<option value="2">Lava Red</option>
 				</select>
 			</div>
-			<div>
-				<span>Game Type:</span>
-				<select id="game_type" onchange="changeGameType()">
-					<option value="1" selected>Canvas</option>
-					<option value="2">CSS</option>
-					<option value="3">SVG</option>
-					<option value="4">UTF8</option>
-				</select>
-			</div>
 		</header>
 		<main>
 			<div class="game">
-				<h1>Game</h1>
-				<div id="game_field_canvas"></div>
-				<div id="game_field_css"></div>
-				<div id="game_field_svg"></div>
-				<div id="game_field_utf8"></div>
+				<div class="game_header">
+					<h1>Game</h1>
+					<span id="game_header_text"></span>
+				</div>
+				<div id="game_field_loading" class="show">
+					<img src="img/fav_white_hq.png" />
+				</div>
+				<div class="game_field">
+					<div id="game_field_canvas">
+						<canvas id="game_canvas" width="400" height="400"></canvas>
+					</div>
+					<div id="game_field_css">
+					</div>
+					<div id="game_field_svg">
+					</div>
+					<div id="game_field_utf8">
+					</div>
+				</div>
 			</div>
 			<div class="controls">
 				<h1>Controls</h1>
+				<span>Your name:&nbsp;</span>
 				<input type="text" id="game_playername" placeholder="Enter your name..." />
+				<br><br>
+				<span>Game Type:&nbsp;</span>
+				<select id="game_type">
+					<option value="canvas" selected>Canvas</option>
+					<option value="css">CSS</option>
+					<option value="svg">SVG</option>
+					<option value="utf8">UTF8</option>
+				</select>
 				<br><br>
 				<button id="game_restart" onclick="gameRestart()">Start Game</button>
 				<button id="music_startstop" onclick="musicStartStop()">Play Music</button>
